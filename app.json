@@ -25,6 +25,8 @@
     ],
     "ios": {
       "supportsTablet": true
-    }
+    },
+    "description": "Simple weather app",
+    "githubUrl": "https://github.com/jieunjeon/weather-app"
   }
 }

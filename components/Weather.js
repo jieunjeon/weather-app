@@ -8,42 +8,60 @@ import {LinearGradient} from "expo-linear-gradient";
 const weatherOptions = {
     Thunderstorm: {
         iconName: "weather-lightning",
-        gradient: ["#373B44", "#4286f4"]
+        gradient: ["#373B44", "#4286f4"],
+        title: "Thunder storm",
+        subtitle: "Don't go outside"
       },
       Drizzle: {
         iconName: "weather-hail",
-        gradient: ["#89F7FE", "#66A6FF"]
+        gradient: ["#89F7FE", "#66A6FF"],
+        title: "Drizzle",
+        subtitle: "Like rain, not rain"
       },
       Rain: {
         iconName: "weather-rainy",
-        gradient: ["#00C6FB", "#005BEA"]
+        gradient: ["#00C6FB", "#005BEA"],
+        title: "Raing",
+        subtitle: "For more info, look outside"
       },
       Snow: {
         iconName: "weather-snowy",
-        gradient: ["#7DE2FC", "#B9B6E5"]
+        gradient: ["#7DE2FC", "#B9B6E5"],
+        title: "Snow",
+        subtitle: "Do you want to build a snowman? Okay Bye.."
       },
       Atmosphere: {
         iconName: "weather-hail",
-        gradient: ["#89F7FE", "#66A6FF"]
+        gradient: ["#89F7FE", "#66A6FF"],
+        title: "Atmosphere",
+        subtitle: "Atmosphere??"
       },
       Clear: {
         iconName: "weather-sunny",
-        gradient: ["#FF7300", "#FEF253"]
+        gradient: ["#FF7300", "#FEF253"],
+        title: "Clear",
+        subtitle: "Go get burn yourself"
       },
       Clouds: {
         iconName: "weather-cloudy",
-        gradient: ["#D7D2CC", "#304352"]
+        gradient: ["#D7D2CC", "#304352"],
+        title: "Clouds",
+        subtitle: "Grey Sky..."
       },
       Mist: {
         iconName: "weather-hail",
-        gradient: ["#4DA0B0", "#D39D38"]
+        gradient: ["#00c3ff", "#ffff1c"],
+        title: "Mist",
+        subtitle: "You like mist?"
       },
       Dust: {
-        iconName: "weather-hail",
-        gradient: ["#4DA0B0", "#D39D38"]
+        iconName: "robot-industrial",
+        gradient: ["#20002c", "#cbb4d4"],
+        title: "Dust",
+        subtitle: "Thanks for China.."
       },
       Haze: {
-        iconName: "weather-hail",
+        iconName: "weather-fog",
         gradient: ["#4DA0B0", "#D39D38"],
         title: "Haze",
         subtitle: "Just don't go outside."
@@ -64,8 +82,8 @@ export default function Weather({temp, condition}) {
                 </View>
                 <View style={{...styles.halfContainer, ...styles.textConatiner}}>
              
-                    <Text style={styles.title}>Titlea dsafdsfasdfa sf asdf sd</Text>
-                    <Text style={styles.subtitle}>Subtitle asdf </Text>
+                    <Text style={styles.title}>{weatherOptions[condition].title}</Text>
+                    <Text style={styles.subtitle}>{weatherOptions[condition].subtitle} </Text>
 
                 </View>
         </LinearGradient>
@@ -105,14 +123,14 @@ const styles = StyleSheet.create({
     },
     title: {
         color: "white",
-        fontSize: 44,
+        fontSize: 48,
         fontWeight: "300",
         marginBottom: 10,
     },
     subtitle: {
         color: "white",
         fontWeight: "600",
-        fontSize: 24,
+        fontSize: 34,
     },
     textConatiner: {
         paddingHorizontal: 20,
